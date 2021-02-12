@@ -2,7 +2,7 @@
 const cartData = [
   {
     id: 0,
-    img: "../src/Image/Bolgarka-Makita.webp",
+    img: "./src/Image/Bolgarka-Makita.webp",
     model: "Генератор Skill 9005 LA",
     type: "Бензиновый",
     power: "5кВт",
@@ -12,7 +12,7 @@ const cartData = [
   },
   {
     id: 1,
-    img: "../src/Image/Bolgarka-Makita.webp",
+    img: "./src/Image/Bolgarka-Makita.webp",
     model: "Генератор Skill 9005 LA",
     type: "Бензиновый",
     power: "5кВт",
@@ -22,7 +22,7 @@ const cartData = [
   },
   {
     id: 2,
-    img: "../src/Image/Bolgarka-Makita.webp",
+    img: "./src/Image/Bolgarka-Makita.webp",
     model: "Генератор Skill 9005 LA",
     type: "Бензиновый",
     power: "5кВт",
@@ -32,7 +32,7 @@ const cartData = [
   },
   {
     id: 3,
-    img: "../src/Image/Bolgarka-Makita.webp",
+    img: "./src/Image/Bolgarka-Makita.webp",
     model: "Генератор Skill 9005 LA",
     type: "Бензиновый",
     power: "5кВт",
@@ -42,7 +42,7 @@ const cartData = [
   },
   {
     id: 4,
-    img: "../src/Image/Bolgarka-Makita.webp",
+    img: "./src/Image/Bolgarka-Makita.webp",
     model: "Генератор Skill 9005 LA",
     type: "Бензиновый",
     power: "5кВт",
@@ -52,7 +52,7 @@ const cartData = [
   },
   {
     id: 5,
-    img: "../src/Image/Bolgarka-Makita.webp",
+    img: "./src/Image/Bolgarka-Makita.webp",
     model: "Генератор Skill 9005 LA",
     type: "Бензиновый",
     power: "5кВт",
@@ -62,7 +62,7 @@ const cartData = [
   },
   {
     id: 6,
-    img: "../src/Image/Bolgarka-Makita.webp",
+    img: "./src/Image/Bolgarka-Makita.webp",
     model: "Генератор Skill 9005 LA",
     type: "Бензиновый",
     power: "5кВт",
@@ -72,7 +72,7 @@ const cartData = [
   },
   {
     id: 7,
-    img: "../src/Image/Bolgarka-Makita.webp",
+    img: "./src/Image/Bolgarka-Makita.webp",
     model: "Генератор Skill 9005 LA",
     type: "Бензиновый",
     power: "5кВт",

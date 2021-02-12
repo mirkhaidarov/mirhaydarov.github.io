@@ -1,0 +1,366 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  max-width: 100%;
+}
+
+html {
+  font-size: 15px;
+}
+
+body {
+  display: flex;
+  font-family: helvetica, arial, sans-serif;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.product--view {
+  padding: 1em;
+}
+
+.wrap {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.product__box {
+  box-shadow: 0 0 0.2em rgba(0, 0, 0, 0.8);
+}
+
+.product-header {
+  display: flex;
+  justify-content: space-between;
+  background-color: gray;
+  padding: 0.3em;
+}
+
+.product-header__switch-view {
+  background: transparent;
+  border: none;
+  outline: none;
+  padding: 1em 6em;
+}
+
+/* Product cart */
+.product__cart--view {
+  font-size: 1rem;
+  padding: 1em;
+}
+
+.product-cart__box {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  /* padding: 1em; */
+}
+
+.product-cart__grid {
+  display: grid;
+  grid-template-rows: 1fr repeat(2, min-content);
+  border: 0.1em solid rgba(0, 0, 0, 0.3);
+  border-radius: 0.3em;
+  width: 100%;
+  padding: 1em;
+  margin: 0.5em;
+}
+
+.product-cart__model {
+  /* margin-bottom: 1em; */
+}
+
+.product-cart__img {
+  width: 150px;
+  max-width: 100%;
+  margin: 0 auto;
+  display: block;
+}
+
+.product-cart__title-box {
+  position: relative;
+}
+
+.product-cart__title {
+  font-size: 1.4em;
+  color: #2d81ff;
+  word-break: break-word;
+}
+
+/* Product cart ContenteditableBox */
+.contenteditable-box {
+  display: none;
+  position: absolute;
+  top: 2em;
+  z-index: 1;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.95);
+  box-shadow: 0 0 0.2em #000;
+  border-radius: 0.3em;
+  padding: 0.3em;
+  outline: none;
+}
+
+.contenteditable-box__field {
+  width: 100%;
+  background: #fff;
+  box-shadow: 0 0 0.1em #000;
+  border: 1px solid rgba(0, 0, 0, 0);
+  border-radius: 0.3em;
+  padding: 0.3em;
+  outline: none;
+}
+
+.contenteditable-box__field:focus {
+  border: 1px solid #2d81ff;
+}
+
+.contenteditable-box__action {
+  display: block;
+  background: #54c754;
+  color: #fff;
+  border: 0.1em solid #2bb32b;
+  border-radius: 0.3em;
+  font-size: 0.8em;
+  cursor: pointer;
+  padding: 0.5em 1.5em;
+  margin: 0 auto;
+  margin-top: 1em;
+  transition: all 0.3s;
+}
+
+.contenteditable-box__action:hover {
+  background-color: #2bb32b;
+}
+
+/* Product cart Characteristic */
+.product-cart__characteristic {
+  display: flex;
+  justify-content: space-between;
+}
+
+.characteristic__list {
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+}
+
+.characteristic__item {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.2em 0;
+}
+
+.characteristic__desc {
+  color: rgba(0, 0, 0, 0.7);
+}
+
+/* Product cart PriceBox */
+.product-cart__price {
+  margin-top: 0.5em;
+}
+
+.price-box {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.price-box__desc {
+  font-weight: bold;
+  font-size: 1.3em;
+  color: #000;
+}
+
+.price-box__cart-action {
+  background-color: transparent;
+  color: #a13f3f;
+  padding: 0.5em 2em;
+  margin-top: 0.4em;
+  transition: all 0.3s;
+  border: 0.1em solid #ff0000;
+  border-radius: 0.3em;
+  font-size: 0.9em;
+  cursor: pointer;
+}
+
+.price-box__cart-action:hover {
+  background-color: red;
+  color: white;
+}
+
+/* Dragging  */
+.dragging {
+  opacity: 0.5;
+}
+
+.over {
+  border: solid red;
+}
+
+/* Drop menu */
+.product-header__drop-menu > .drop-menu__list {
+  background-color: rgba(0, 0, 0, 0);
+  border: 0.1em solid rgba(0, 0, 0, 0);
+}
+
+.drop-menu__list {
+  list-style: none;
+  background-color: #f8f8f8;
+  border: 0.1em solid #e7e7e7;
+}
+
+.drop-menu__list li:hover > ul {
+  display: block;
+}
+
+.product-header__drop-menu > ul > li > a {
+  color: transparent;
+  padding: 0.5em 2em;
+}
+
+.product-header__drop-menu > ul > li > a:hover {
+  color: transparent;
+  background-color: rgba(0, 0, 0, 0);
+}
+
+.drop-menu__link {
+  display: block;
+  text-decoration: none;
+  color: #777;
+  padding: 0.5em;
+  outline: none;
+}
+
+.drop-menu__link:hover {
+  background-color: #e7e7e7;
+  color: #555;
+}
+
+.drop-menu__list .drop-menu__item {
+  position: relative;
+}
+
+.drop-menu__list li ul {
+  display: none;
+  position: absolute;
+  min-width: 12em;
+}
+
+.drop-menu__list li > ul li ul {
+  position: absolute;
+  top: 0;
+  right: -12em;
+}
+
+/* Switch view */
+.table {
+  display: table;
+  width: 100%;
+  table-layout: fixed;
+  border-collapse: collapse;
+}
+
+.table-head {
+  display: table-header-group;
+  background-color: #ded5d5;
+}
+
+.table-body {
+  display: table-row-group;
+}
+
+.table-tr {
+  display: table-row;
+}
+
+.table-th-td {
+  display: table-cell;
+  text-align: center;
+  vertical-align: middle;
+  padding: 0.4em;
+}
+
+.table-img {
+  display: initial;
+  width: 75px;
+  margin: auto;
+}
+
+.hidden {
+  display: none;
+}
+
+/* Media  */
+@media screen and (min-width: 450px) {
+  .product-cart__grid {
+    width: 80%;
+  }
+}
+
+@media screen and (min-width: 550px) {
+  html {
+    font-size: 17px;
+  }
+
+  .product-cart__grid {
+    width: 15em;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .table,
+  .table-head,
+  .table-body,
+  .table-th-td,
+  .table-tr {
+    display: block;
+    width: 100vw;
+  }
+
+  .table-head .table-tr {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+  }
+
+  .table-tr {
+    margin: auto;
+    margin-bottom: 1em;
+  }
+
+  .table-th-td {
+    border: none;
+    border-bottom: 1px solid #eee;
+    position: relative;
+    padding-left: 50%;
+  }
+
+  .table-th-td:before {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0.2em;
+    white-space: nowrap;
+  }
+
+  .table-th-td:nth-of-type(1):before {
+    content: "Модель";
+  }
+  .table-th-td:nth-of-type(2):before {
+    content: "Тип";
+  }
+  .table-th-td:nth-of-type(3):before {
+    content: "Тип Запуска";
+  }
+  .table-th-td:nth-of-type(4):before {
+    content: "Мощность";
+  }
+  .table-th-td:nth-of-type(5):before {
+    content: "Напряжение";
+  }
+  .table-th-td:nth-of-type(6):before {
+    content: "Цена";
+  }
+}

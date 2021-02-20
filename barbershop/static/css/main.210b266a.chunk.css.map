@@ -1,1 +1,0 @@
-{"version":3,"sources":["index.css"],"names":[],"mappings":"AAAA,eACE,cACF,CAFA,YACE,cAAe,CACf,eAAgB,CAChB,iBACF,CAEA,qBACE,aAAc,CACd,UAAW,CACX,eACF","file":"main.210b266a.chunk.css","sourcesContent":[".module-box {\n  margin-top: 1em;\n  line-height: 1.2;\n  align-items: start;\n}\n\n.sideBar__datePicker {\n  font-size: 1em;\n  color: #fff;\n  font-weight: 400;\n}"]}
